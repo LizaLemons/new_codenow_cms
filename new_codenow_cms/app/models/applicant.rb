@@ -1,4 +1,4 @@
 class Applicant < ActiveRecord::Base
 	belongs_to 				:user
-	belongs_to 				:workshops
+	belongs_to 				:workshop
 end

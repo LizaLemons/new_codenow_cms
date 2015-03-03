@@ -98,13 +98,13 @@ ibm = Sponsor.create(
 yvonne = User.create(
 	first_name: "Yvonne",
 	last_name: "De La Pena",
-	type: "admin"
+	user_type: "admin"
 	)
 
 justin = User.create(
 	first_name: "Justin",
 	last_name: "Hudson",
-	type: "staff"
+	user_type: "staff"
 	)
 
 buzzfeed = WorkshopLocation.create(

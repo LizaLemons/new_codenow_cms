@@ -1,0 +1,10 @@
+<h1><%= @user.first_name %>'s Profile</h1>
+<hr>
+
+<h2>Your Applicants</h2>
+<hr>
+<ul>
+	<% @applicants.each do |applicant| %>
+		<li><%= "#{applicant.first_name} #{applicant.last_name} | #{applicant.email} | #{applicant.home_phone}" %></li>
+	<% end %>
+</ul>

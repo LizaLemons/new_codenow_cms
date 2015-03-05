@@ -1,0 +1,10 @@
+<h1>Workshop at <%= @workshop.workshop_location.location_name %> on <%= @workshop.workshop_date %></h1>
+<hr>
+
+<h2>Who's signed up?</h2>
+<hr>
+<ul>
+	<% @applicants.each do |applicant| %>
+		<li><%= "#{applicant.first_name} #{applicant.last_name} | #{applicant.email} | #{applicant.home_phone}" %></li>
+	<% end %>
+</ul>

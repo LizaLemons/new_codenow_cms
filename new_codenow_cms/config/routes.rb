@@ -1,6 +1,31 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  root 'welcome#index'
+  resources :applicants
+  resources :applications do
+    resources :application_questions, shallow: true
+  end
+  resources :workshops do
+    resources :applicants, only: [:show]
+  end
+  resources :users do
+    resources :applicants, only: [:show]
+  end
+
+  # To add =====================
+  # resources :sponsors
+  # resources :workshop_locations
+  # resources :workshops
+  # resources :partners
+  # ============================
+
+
+
+
+
+
+
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
@@ -12,7 +37,6 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
 
   # Example resource route with options:
   #   resources :products do
